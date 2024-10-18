@@ -285,7 +285,7 @@ class App:
         if not user_info:
             self.threads = 1
         else:
-            self.threads = min(self.threads, user_info.get("maxthreads"))
+            self.threads = min(self.threads, user_info.response.ssuser.get("maxthreads"))
 
     def scrape(self, rom, system_id):
         scraped_box = scraped_preview = scraped_synopsis = None
